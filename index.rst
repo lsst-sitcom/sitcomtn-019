@@ -48,15 +48,14 @@
 
    This proposal outlines how observing tasks are currently flowed from the planning stage through execution, then linked to data analysis technotes and/or notebooks.
 
-   The process is analogous to what is done in the LVV project, where Jira is used as a central workflow management tool, linking the pieces together, monitoring the process,
-   and making it visible to all the stakeholders.
+   The process is analogous to what is done in the LVV project, where Jira is used as a central workflow management tool, linking the pieces together, monitoring the process, and making it visible to all the stakeholders.
 
    This process will go through a major overhaul in the coming months, but this document acts as the central point for discussion.
 
 Introduction
 ============
 
-The coordination of night time and daytime activities is continuing to increase as we continue to progress into the commissioning phase.
+The coordination of nighttime and daytime activities is continuing to increase as we progress deeper into the commissioning phase.
 This document outlines how Auxiliary Telescope observing runs are currently being conducted, from the observation planning stage, through the data reduction phase, and including the impacts on day crews providing critical troubleshooting of issues that have arisen during the night.
 
 Some of the overarching goals are:
@@ -73,7 +72,7 @@ This technote is designed to be a "living document" that is updated as the proce
 Run Planning Blocks and Epics
 =============================
 
-At the time of writing, there are currently two runs AuxTel runs per month, each consisting of 3 nights.
+At the time of writing, there are currently two AuxTel runs per month, each consisting of 3 consecutive nights.
 Even with the main telescope, it is anticipated that observing runs will be organized in ~2 week stints due to the dynamic evolution of observatory commissioning.
 Therefore, we have adopted each month be separated into A and B blocks (e.g. 2022-05A and 2022-05B).
 The exact separation date between A and B is not fixed, however, ideally this would fall near the 15th of the month.
@@ -81,7 +80,7 @@ There are scenarios in which planners will want to move to the next block either
 The most common example of this would be the rollout of a new software interval, however, one could imagine a hardware change (or addition) could be sufficient to warrant a new block.
  
 The rollout dates for these cycles are dependent upon when features are needed and/or ready, and therefore the dates are not predictable, nor are hardware schedules.
-Therefore we anticipate the the transition to the B block might occur either earlier or later.
+Therefore we anticipate that the transition to the B block might occur either earlier or later.
 In some situations, a C-block may be necessary. 
 This is permitted, but should be avoided whenever possible.
 
@@ -115,22 +114,28 @@ It is acceptable to attach small files and/or link other documents where applica
 The prioritization of the observation is handled by the commissioning leads, but all tasks must go through proper preparations to maximize on-sky efficiency. 
 This is discussed further in the `Observation Preparation`_ section.
 
-When proposing an observation, a jira ticket (story), in the `SITCOM Jira Project <https://jira.lsstcorp.org/projects/SITCOM/issues/SITCOM-310?filter=allopenissues>`_.
-Be sure to complete the following steps:
+When proposing an observation, a jira ticket (story), must be created in the `SITCOM Jira Project <https://jira.lsstcorp.org/projects/SITCOM/issues/SITCOM-310?filter=allopenissues>`_.
+When creating the ticket, be sure to complete the following steps:
 
-#. Link the epic in which the proposal is to performed
+#. Link the epic in which the proposal is to be performed
 #. Add a brief description of the observation, and a justification.
    Linking supporting documentation is encouraged.
 #. Include condition constraints, specifically seeing, transparency, and an evaluation of stability (if appropriate).
 #. Include details on any required supporting hardware (e.g. the DIMM must be operational)
-#. Set the reviewer to ``pingraham``, *and also them add as a watcher*. 
+#. Add ``pingraham`` as a watcher *and* reviewer. 
    The ticket creator can also add themselves as a reviewer if desired.
+   Reviewers verify that the observers attach a sufficient amount of information and that any follow-on tickets are properly created.
 #. For Scheduler driven observations, a configuration file will need to be generated.
    This will be done under a separate ticket and linked here.
    Contact Tiago Ribeiro for assistance and details.
 #. If applicable, create a ticket to analyze and publish the results.
    This should be common practice for all non-campaign observations.
 #. Results of any analysis or lessons learned should be either added to the ticket as a comment (if short), or published as SITCOM technotes and linked to the ticket(s).
+
+.. note::
+  
+  The previous procedure is known to suffer from multiple weaknesses. 
+  Fixing this structure will be one of the primary tasks and revisions to this document.  
 
 Observation Preparation
 =======================
