@@ -6,49 +6,105 @@
    This proposal outlines how observing tasks will be flowed from the planning stage through execution, then linked to data analysis technotes and/or notebooks.
 ```
 
-% Technote content.
-%
-% See https://developer.lsst.io/restructuredtext/style.html
-% for a guide to reStructuredText writing.
-%
-% Do not put the title, authors or other metadata in this document;
-% those are automatically added.
-%
-% Use the following syntax for sections:
-%
-% Sections
-% ========
-%
-% and
-%
-% Subsections
-% -----------
-%
-% and
-%
-% Subsubsections
-% ^^^^^^^^^^^^^^
-%
-% To add images, add the image file (png, svg or jpeg preferred) to the
-% _static/ directory. The reST syntax for adding the image is
-%
-% .. figure:: /_static/filename.ext
-%    :name: fig-label
-%
-%    Caption text.
-%
-%  Run: ``make html`` and ``open _build/html/index.html`` to preview your work.
-%  See the README at https://github.com/lsst-sqre/lsst-technote-bootstrap or
-%  this repo's README for more info.
-%
-%  Feel free to delete this instructional comment.
-
-% TODO: Delete the note below before merging new content to the master branch.
-
 :::{note}
 This proposal outlines how observing tasks are currently flowed from the planning stage through execution, then linked to data analysis technotes and/or notebooks.
+:::
 
-The process is analogous to what is done in the LVV project, where Jira is used as a central workflow management tool, linking the pieces together, monitoring the process, and making it visible to all the stakeholders.
+# Introduction
+
+(add an introduction here)
+
+All the tests we run start with an idea, a requirement, a problem to be investigated and follow four big steps:
+
+* Creation
+* Planning
+* Execution
+* Analysis
+
+<!-- TODO - Convert this diagram in to a more controlled format -->
+Each of these steps has its workflow, which is represented in the [Test Workflows Whiteboard in Confluence](https://rubinobs.atlassian.net/wiki/spaces/LSSTCOM/whiteboard/491618342).
+
+# Test Creation
+
+Our entry point for converting tests and ideas into Test Cases and JSON Blocks is the #sitcom-observing-block channel. As described in that Slack channel’s canvas, the process we use to receive requests to create or update Test Cases or JSON Blocks consists of the following steps:
+
+1. Create a BLOCK or SITCOM ticket with the test_case label.
+
+2. The title of the ticket should be consistent with what is being requested.
+   Here are a few examples:
+
+   1. "Create test case for ..."
+   2. "Create test case and JSON file for ..."
+   3. "Update test case for ..."
+   4. "Update JSON file for ..."
+
+3. Add extra labels to help filter the board.
+   See a few example of labels in the [Labels](#labels) section below.
+
+4. In the ticket description, make sure you add:
+   1. Test goal
+   2. The pre-conditions
+   3. The steps needed
+
+5. Define the priority for writing down this test.
+   See the [Priorities](#priorities) session for more details.
+
+You can use the Test Create Priorities to define the ticket priority.
+
+## Labels
+
+Labels are used to quickly find tickets, create queries, boards, and dashboards.
+The labels here should all be lower case and words separated by a underscore (`_`).
+Please, avoid creating labels that can be de-coupled into two other labels.
+For example: instead of `lsstcam_science`, use `lsstcam` and `science`.
+Or, even better, just use `science`, since `lsstcam` is the default camera.
+
+| **Label**           | **Description**                                                                 |
+|---------------------|---------------------------------------------------------------------------------|
+| `create`            | Used for the creation of a test case or JSON file.                              |
+| `update`            | Used for updating a test case or JSON file.                                     |
+| `json_block`        | Used when a JSON file is required.                                              |
+| `on_sky/not_on_sky` | Used for on-sky or not-on-sky tests.                                            |
+| `daytime_test`      | Used for tests that could be performed during the daytime.                      |
+| `parallelize`       | Used for tests that have potential for being parallelized.                      |
+|---------------------|---------------------------------------------------------------------------------|
+| `aos_commissioning` | Used for tests associated with the Active Optics System                         |
+| `LSSTCam`           | Used for tests aiming to check functionality of requirements associated with LSSTCam |
+| `calibration`       | Used for tests related to the calibration system                                |
+| `image_quality`     | Used for tests associated with image quality.                                   |
+| `sciece`            | Used for Science Observations programs                                          |
+| `stray_light`       | Used for tests associated with stray light investigations.                      |
+| `standard_procedures` | Used for procedures that are represented as test cases.                       |
+|-------------------------------------------------------------------------------------------------------|
+
+Each row in the second part of the table above corresponds to a Quick Filter in the [Blocks Creation Status](https://rubinobs.atlassian.net/jira/software/c/projects/BLOCK/boards/259) board.
+
+## Priorities
+
+Each of these steps has a definition of priority.
+We should have an agreement on each of them. Here is the first proposal.
+When it comes to priorities, we must agree on the following points:
+
+We must have 3 to 5 priorities at most. Proposed: **critical** and/or **blocker**, **high**, **standard**, **low**.
+If everything is a top priority, we do not have priorities.
+For each priority, we want to have:
+
+* A clear criteria to help people use the correct priority.
+* Expected estimated time for completion
+
+# Test Planning
+
+(add text)
+
+# Test Execution
+
+(add text)
+
+# Test Anaysis
+
+(add text)
+
+<!-- The process evolved The process is analogous to what is done in the LVV project, where Jira is used as a central workflow management tool, linking the pieces together, monitoring the process, and making it visible to all the stakeholders.
 
 This process will go through a major overhaul in the coming months, but this document acts as the central point for discussion.
 :::
@@ -287,4 +343,4 @@ Some analysis tasks may not require this level of detail and therefore a short s
 
 % .. bibliography:: local.bib lsstbib/books.bib lsstbib/lsst.bib lsstbib/lsst-dm.bib lsstbib/refs.bib lsstbib/refs_ads.bib
 
-% :style: lsst_aa
+% :style: lsst_aa -->
