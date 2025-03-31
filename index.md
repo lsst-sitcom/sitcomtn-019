@@ -32,8 +32,7 @@ In practice, Jira is where the request and coordination happen, and Zephyr Scale
 This separation helps us coordinate testing work efficiently while also enabling traceability between test cases, their executions, and the broader goals captured in Jira tickets and epics.
 
 It is important that the reader understands the differences between these two tools before moving forward.
-In adition, the reader must be aware of the different keys used in both systems:
-
+In addition, the reader must be aware of the different keys used in both systems:
 * BLOCK-000: A standard Jira ticket in the BLOCK project, typically used for task tracking, coordination, or as a placeholder for test creation.
 
 * BLOCK-T000: A Zephyr Scale test case in the BLOCK project, defining a set of steps, inputs, and expected outcomes for a specific test.
