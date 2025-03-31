@@ -91,7 +91,7 @@ Or, even better, just use `science`, since `lsstcam` is the default camera.
 | `LSSTCam`           | Used for tests aiming to check functionality of requirements associated with LSSTCam |
 | `calibration`       | Used for tests related to the calibration system                                |
 | `image_quality`     | Used for tests associated with image quality.                                   |
-| `sciece`            | Used for Science Observations programs                                          |
+| `science`           | Used for Science Observations programs                                          |
 | `stray_light`       | Used for tests associated with stray light investigations.                      |
 | `standard_procedures` | Used for procedures that are represented as test cases.                       |
 |-------------------------------------------------------------------------------------------------------|
