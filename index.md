@@ -24,6 +24,26 @@ All the tests we run start with an idea, a requirement, a problem to be investig
 <!-- TODO - Convert this diagram in to a more controlled format -->
 Each of these steps has its workflow, which is represented in the [Test Workflows Whiteboard in Confluence](https://rubinobs.atlassian.net/wiki/spaces/LSSTCOM/whiteboard/491618342).
 
+
+While Jira provides the general infrastructure for issue tracking and project management, Zephyr Scale is a test management plugin that integrates seamlessly with Jira.
+Jira handles tasks like bug tracking, planning, and organizing work via tickets (e.g., BLOCK-000), whereas Zephyr Scale adds dedicated features for defining test cases, organizing test cycles, tracking execution status, and reporting on test coverage and results.
+
+In practice, Jira is where the request and coordination happen, and Zephyr Scale is where the structured test definitions and execution history live.
+This separation helps us coordinate testing work efficiently while also enabling traceability between test cases, their executions, and the broader goals captured in Jira tickets and epics.
+
+It is important that the reader understands the differences between these two tools before moving forward.
+In adition, the reader must be aware of the different keys used in both systems:
+
+* BLOCK-000: A standard Jira ticket in the BLOCK project, typically used for task tracking, coordination, or as a placeholder for test creation.
+
+* BLOCK-T000: A Zephyr Scale test case in the BLOCK project, defining a set of steps, inputs, and expected outcomes for a specific test.
+
+* BLOCK-R000: A Zephyr Scale test cycle, grouping multiple test cases to be executed together, often aligned with a specific night or campaign.
+
+* BLOCK-E000: A Zephyr Scale test execution, representing the result of running a specific test case (T000) within a given test cycle (R000).
+
+* BLOCK-P000: A Zephyr Scale test plan, which can include multiple test cycles (R000) and provides a higher-level view of testing coverage and progress.
+
 # Test Creation
 
 Our entry point for converting tests and ideas into Test Cases and JSON Blocks is the #sitcom-observing-block channel. As described in that Slack channel’s canvas, the process we use to receive requests to create or update Test Cases or JSON Blocks consists of the following steps:
