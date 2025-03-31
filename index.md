@@ -119,8 +119,7 @@ For each priority, we want to have:
 
 (add text)
 
-# Test Anaysis
-
+# Test Analysis
 (add text)
 
 <!-- The process evolved The process is analogous to what is done in the LVV project, where Jira is used as a central workflow management tool, linking the pieces together, monitoring the process, and making it visible to all the stakeholders.
