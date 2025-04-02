@@ -7,7 +7,7 @@
 ```
 
 :::{note}
-This proposal outlines how observing tasks are currently flowed from the planning stage through execution, then linked to data analysis technotes and/or notebooks.
+This technote outlines how observing tasks are currently flowed from the planning stage through execution, then linked to data analysis technotes and/or notebooks.
 :::
 
 # Introduction
@@ -57,16 +57,18 @@ Our entry point for converting tests and ideas into Test Cases and JSON Blocks i
    3. "Update test case for ..."
    4. "Update JSON file for ..."
 
+<!-- TODO: Convert Labels into a link -->
 3. Add extra labels to help filter the board.
-   See a few example of labels in the [Labels](#labels) section below.
+   See a few example of labels in the Labels section below.
 
 4. In the ticket description, make sure you add:
    1. Test goal
    2. The pre-conditions
    3. The steps needed
 
+<!-- TODO: Convert Priorities into a link -->
 5. Define the priority for writing down this test.
-   See the [Priorities](#priorities) session for more details.
+   See the **Priorities** session for more details.
 
 You can use the Test Create Priorities to define the ticket priority.
 
